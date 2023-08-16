@@ -1,9 +1,10 @@
-package model;
+package com.example.mercado.model;
 
-import org.springframework.data.annotation.Id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-// Arrumar os imports
-//Model ainda Incompleta.
 @Entity
 public class EstoqueModel {
 
@@ -12,24 +13,28 @@ public class EstoqueModel {
     private Long id;
     private String produto;
     private int quantidade;
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getProduto() {
-		return produto;
-	}
-	public void setProduto(String produto) {
-		this.produto = produto;
-	}
-	public int getQuantidade() {
-		return quantidade;
-	}
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
-	}
 
-   
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getProduto() {
+        return produto;
+    }
+
+    public void setProduto(String produto) {
+        this.produto = produto;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
 }

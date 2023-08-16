@@ -1,8 +1,10 @@
-package repository;
+package com.example.mercado.repository;
 
+import com.example.mercado.model.Produto;
 import org.springframework.data.jpa.repository.JpaRepository;
-import model.Estoque;
+import org.springframework.stereotype.Repository;
 
-public interface EstoqueRepository extends JpaRepository<Estoque, Long> {
-    // Você pode adicionar consultas personalizadas aqui, se necessário
+@Repository
+public interface EstoqueRepository extends JpaRepository<Produto, Long> {
+    boolean temEstoque(Produto produto);
 }
